@@ -1,27 +1,3 @@
-:root {
-    /* not */
-    --j: 1;
-    --k: 1;
-
-    /* not */
-    --notj: calc(1 - var(--j));
-
-    /* and */
-    --and: calc(var(--i1) * var(--i2));
-
-    /* nand */
-    --nand: calc(1 - var(--k) * var(--i));
-
-    /* or */
-    --or: calc(1 - (1 - var(--k)) * (1 - var(--i)));
-
-    /* nor */
-    --nor: calc((1 - var(--k)) * (1 - var(--i)));
-
-    /* xor */
-    --xor: calc((var(--k) - var(--i)) * (var(--k) - var(--i)));
-}
-
 body {
     padding: 2rem;
 }
@@ -43,9 +19,24 @@ body > div {
     display: flex;
 }
 
+body > div > section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 2rem;
+    flex-wrap: wrap;
+}
+
 body > div > section > h2 {
     padding: 2rem;
     transition: all 0.5s;
+    color: green;
+}
+
+body > div > section > p:last-of-type {
+    font-size: 1.25rem;
+    font-weight: bold;
 }
 
 /* not (Cheated) if no one is enabled = false)*/
@@ -104,42 +95,42 @@ div > section:nth-of-type(4) > h2 {
     opacity: calc(var(--or) * 1);
 }
 
-input[type='checkbox']:first-of-type:checked ~ div > h2:nth-of-type(4) {
+input[type='checkbox']:first-of-type:checked ~ div > section:nth-of-type(4) > h2 {
     --enabled1: 0;
 }
 
-input[type='checkbox']:last-of-type:checked ~ div > h2:nth-of-type(4) {
+input[type='checkbox']:last-of-type:checked ~ div > section:nth-of-type(4) > h2 {
     --enabled2: 0;
 }
 
 /* nor gate if no one is enabled = true */
-div > h2:nth-of-type(5) {
+div > section:nth-of-type(5) > h2 {
     --i1: var(--enabled1, 0);
     --i2: var(--enabled2, 0);
     --nor: calc((1 - var(--i1)) * (1 - var(--i2)));
     opacity: calc(var(--nor) * 1);
 }
 
-input[type='checkbox']:first-of-type:checked ~ div > h2:nth-of-type(5) {
+input[type='checkbox']:first-of-type:checked ~ div > section:nth-of-type(5) > h2 {
     --enabled1: 1;
 }
 
-input[type='checkbox']:last-of-type:checked ~ div > h2:nth-of-type(5) {
+input[type='checkbox']:last-of-type:checked ~ div > section:nth-of-type(5) > h2 {
     --enabled2: 1;
 }
 
 /* xor gate no one is enabled = false */
-div > h2:nth-of-type(6) {
+div > section:nth-of-type(6) > h2 {
     --i1: var(--enabled1, 0);
     --i2: var(--enabled2, 0);
     --xor: calc((var(--i1) - var(--i2)) * (var(--i1) - var(--i2)));
     opacity: calc(var(--xor) * 1);
 }
 
-input[type='checkbox']:first-of-type:checked ~ div > h2:nth-of-type(6) {
+input[type='checkbox']:first-of-type:checked ~ div > section:nth-of-type(6) > h2 {
     --enabled1: 1;
 }
 
-input[type='checkbox']:last-of-type:checked ~ div > h2:nth-of-type(6) {
+input[type='checkbox']:last-of-type:checked ~ div > section:nth-of-type(6) > h2 {
     --enabled2: 1;
 }

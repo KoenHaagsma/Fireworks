@@ -25,7 +25,7 @@ div:nth-of-type(1) {
     border-radius: 50%;
     animation-name: shootUp, explode;
     animation-delay: 0ms;
-    animation-duration: 1s;
+    animation-duration: 0.25s;
     animation-timing-function: ease-in-out;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
@@ -37,9 +37,9 @@ div:nth-of-type(2) {
     height: 12px;
     width: 12px;
     border-radius: 50%;
-    animation-name: shootUp, shootLeft;
-    animation-delay: 0ms, 1000ms;
-    animation-duration: 1s, 0.5s;
+    animation-name: shootUp, shootLeftBottom;
+    animation-delay: 0ms, 250ms;
+    animation-duration: 0.25s, 0.25s;
     animation-timing-function: ease-in-out, ease-in-out;
     animation-iteration-count: 1, 1;
     animation-fill-mode: forwards, forwards;
@@ -52,54 +52,125 @@ div:nth-of-type(3) {
     height: 12px;
     width: 12px;
     border-radius: 50%;
-    animation-name: shootUp, shootRight;
-    animation-delay: 0ms, 1000ms;
-    animation-duration: 1s, 0.5s;
+    animation-name: shootUp, shootRightBottom;
+    animation-delay: 0ms, 250ms;
+    animation-duration: 0.25s, 0.25s;
+    animation-timing-function: ease-in-out, ease-in-out;
+    animation-iteration-count: 1, 1;
+    animation-fill-mode: forwards, forwards;
+}
+
+div:nth-of-type(4) {
+    position: absolute;
+    background-color: white;
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    animation-name: shootUp, shootRightTop;
+    animation-delay: 0ms, 250ms;
+    animation-duration: 0.25s, 0.25s;
+    animation-timing-function: ease-in-out, ease-in-out;
+    animation-iteration-count: 1, 1;
+    animation-fill-mode: forwards, forwards;
+}
+
+div:nth-of-type(5) {
+    position: absolute;
+    background-color: white;
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    animation-name: shootUp, shootLeftTop;
+    animation-delay: 0ms, 250ms;
+    animation-duration: 0.25s, 0.25s;
+    animation-timing-function: ease-in-out, ease-in-out;
+    animation-iteration-count: 1, 1;
+    animation-fill-mode: forwards, forwards;
+}
+
+div:nth-of-type(6) {
+    position: absolute;
+    background-color: white;
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    animation-name: shootUp, shootBottom;
+    animation-delay: 0ms, 250ms;
+    animation-duration: 0.25s, 0.25s;
+    animation-timing-function: ease-in-out, ease-in-out;
+    animation-iteration-count: 1, 1;
+    animation-fill-mode: forwards, forwards;
+}
+
+div:nth-of-type(7) {
+    position: absolute;
+    background-color: white;
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    animation-name: shootUp, shootTop;
+    animation-delay: 0ms, 250ms;
+    animation-duration: 0.25s, 0.25s;
     animation-timing-function: ease-in-out, ease-in-out;
     animation-iteration-count: 1, 1;
     animation-fill-mode: forwards, forwards;
 }
 
 @keyframes shootUp {
-    0% {
-        transform: translateY(0);
-    }
-    100% {
+    to {
         transform: translateY(-50vh);
     }
 }
 
 @keyframes explode {
-    0% {
-        background-color: white;
-        opacity: 1;
-    }
-    100% {
+    to {
         background-color: white;
         opacity: 0;
     }
 }
 
-@keyframes shootLeft {
-    0% {
-        background-color: white;
-        transform: translate(0vw, -50vh);
-        offset-distance: 0%;
-    }
-    100% {
+@keyframes shootLeftBottom {
+    to {
         transform: translate(5vw, -45vh);
         background-color: red;
         offset-distance: 100%;
     }
 }
 
-@keyframes shootRight {
-    0% {
-        background-color: white;
-        transform: translate(0vw, -50vh);
+@keyframes shootLeftTop {
+    to {
+        transform: translate(5vw, -55vh);
+        background-color: red;
+        offset-distance: 100%;
     }
-    100% {
+}
+
+@keyframes shootRightTop {
+    to {
+        transform: translate(-5vw, -55vh);
+        background-color: red;
+        offset-distance: 100%;
+    }
+}
+
+@keyframes shootRightBottom {
+    to {
         transform: translate(-5vw, -45vh);
+        background-color: red;
+    }
+}
+
+@keyframes shootTop {
+    to {
+        transform: translate(0vw, -60vh);
+        background-color: red;
+        offset-distance: 100%;
+    }
+}
+
+@keyframes shootBottom {
+    to {
+        transform: translate(0vw, -40vh);
         background-color: red;
     }
 }

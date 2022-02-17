@@ -27,12 +27,26 @@ body {
 }
 
 /* Fireworks 1 */
-div:nth-of-type(1) > div:nth-of-type(1) {
+div > div {
     position: absolute;
     background-color: white;
     height: 12px;
     width: 12px;
     border-radius: 50%;
+}
+
+div > div > div {
+    position: absolute;
+    background-color: red;
+    opacity: 0.5;
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+}
+
+/* Shoot first */
+/* Shoot up */
+div:nth-of-type(1) > div:nth-of-type(1) {
     animation-name: shootUp, explode;
     animation-delay: 0ms;
     animation-duration: var(--ShootUpDuration);
@@ -43,13 +57,9 @@ div:nth-of-type(1) > div:nth-of-type(1) {
     --YEnd: -50vh;
 }
 
+/* Right bottom */
 div:nth-of-type(1) > div:nth-of-type(2) {
-    position: absolute;
-    background-color: white;
-    height: 12px;
-    width: 12px;
-    border-radius: 50%;
-    animation-name: shootUp, shootLeftBottom;
+    animation-name: shootUp, shootFirst;
     animation-delay: 0ms, var(--ShootUpDuration);
     animation-duration: var(--ShootUpDuration), var(--ShootDuration);
     animation-timing-function: var(--cB), var(--cBExplosion);
@@ -57,16 +67,94 @@ div:nth-of-type(1) > div:nth-of-type(2) {
     animation-fill-mode: forwards, forwards;
     --YStart: 0vh;
     --YEnd: -50vh;
+    --StartWidth: 0vw;
+    --StartHeight: -50vh;
+    --EndWidth: 5vw;
+    --EndHeight: -45vh;
+}
+/* Left bottom */
+div:nth-of-type(1) > div:nth-of-type(3) {
+    animation-name: shootUp, shootFirst;
+    animation-delay: 0ms, var(--ShootUpDuration);
+    animation-duration: var(--ShootUpDuration), var(--ShootDuration);
+    animation-timing-function: var(--cB), var(--cBExplosion);
+    animation-iteration-count: 1, 1;
+    animation-fill-mode: forwards, forwards;
+    --YStart: 0vh;
+    --YEnd: -50vh;
+    --StartWidth: 0vw;
+    --StartHeight: -50vh;
+    --EndWidth: -5vw;
+    --EndHeight: -45vh;
 }
 
+/* Left top */
+div:nth-of-type(1) > div:nth-of-type(4) {
+    animation-name: shootUp, shootFirst;
+    animation-delay: 0ms, var(--ShootUpDuration);
+    animation-duration: var(--ShootUpDuration), var(--ShootDuration);
+    animation-timing-function: var(--cB), var(--cBExplosion);
+    animation-iteration-count: 1, 1;
+    animation-fill-mode: forwards, forwards;
+    --YStart: 0vh;
+    --YEnd: -50vh;
+    --StartWidth: 0vw;
+    --StartHeight: -50vh;
+    --EndWidth: -5vw;
+    --EndHeight: -55vh;
+}
+
+/* Right top */
+div:nth-of-type(1) > div:nth-of-type(5) {
+    animation-name: shootUp, shootFirst;
+    animation-delay: 0ms, var(--ShootUpDuration);
+    animation-duration: var(--ShootUpDuration), var(--ShootDuration);
+    animation-timing-function: var(--cB), var(--cBExplosion);
+    animation-iteration-count: 1, 1;
+    animation-fill-mode: forwards, forwards;
+    --YStart: 0vh;
+    --YEnd: -50vh;
+    --StartWidth: 0vw;
+    --StartHeight: -50vh;
+    --EndWidth: 5vw;
+    --EndHeight: -55vh;
+}
+
+/* Top */
+div:nth-of-type(1) > div:nth-of-type(6) {
+    animation-name: shootUp, shootFirst;
+    animation-delay: 0ms, var(--ShootUpDuration);
+    animation-duration: var(--ShootUpDuration), var(--ShootDuration);
+    animation-timing-function: var(--cB), var(--cBExplosion);
+    animation-iteration-count: 1, 1;
+    animation-fill-mode: forwards, forwards;
+    --YStart: 0vh;
+    --YEnd: -50vh;
+    --StartWidth: 0vw;
+    --StartHeight: -50vh;
+    --EndWidth: -0vw;
+    --EndHeight: -60vh;
+}
+
+/* Bottom */
+div:nth-of-type(1) > div:nth-of-type(7) {
+    animation-name: shootUp, shootFirst;
+    animation-delay: 0ms, var(--ShootUpDuration);
+    animation-duration: var(--ShootUpDuration), var(--ShootDuration);
+    animation-timing-function: var(--cB), var(--cBExplosion);
+    animation-iteration-count: 1, 1;
+    animation-fill-mode: forwards, forwards;
+    --YStart: 0vh;
+    --YEnd: -50vh;
+    --StartWidth: 0vw;
+    --StartHeight: -50vh;
+    --EndWidth: 0vw;
+    --EndHeight: -40vh;
+}
+
+/* Shoot second */
 div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) {
-    position: absolute;
-    background-color: red;
-    opacity: 0.5;
-    height: 12px;
-    width: 12px;
-    border-radius: 50%;
-    animation-name: shootOutLeftBottom1;
+    animation-name: shootSecond;
     animation-delay: var(--ShootOutDelay);
     animation-duration: var(--ShootOutDuration);
     animation-timing-function: ease-in-out;
@@ -77,13 +165,7 @@ div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) {
 }
 
 div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2) {
-    position: absolute;
-    background-color: red;
-    opacity: 0.5;
-    height: 12px;
-    width: 12px;
-    border-radius: 50%;
-    animation-name: shootOutLeftBottom2;
+    animation-name: shootSecond;
     animation-delay: var(--ShootOutDelay);
     animation-duration: var(--ShootOutDuration);
     animation-timing-function: ease-in-out;
@@ -94,13 +176,7 @@ div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2) {
 }
 
 div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(3) {
-    position: absolute;
-    background-color: red;
-    opacity: 0.5;
-    height: 12px;
-    width: 12px;
-    border-radius: 50%;
-    animation-name: shootOutLeftBottom3;
+    animation-name: shootSecond;
     animation-delay: var(--ShootOutDelay);
     animation-duration: var(--ShootOutDuration);
     animation-timing-function: ease-in-out;
@@ -110,30 +186,8 @@ div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(3) {
     --YEnd: -50vh;
 }
 
-div:nth-of-type(1) > div:nth-of-type(3) {
-    position: absolute;
-    background-color: white;
-    height: 12px;
-    width: 12px;
-    border-radius: 50%;
-    animation-name: shootUp, shootRightBottom;
-    animation-delay: 0ms, var(--ShootUpDuration);
-    animation-duration: var(--ShootUpDuration), var(--ShootDuration);
-    animation-timing-function: var(--cB), var(--cBExplosion);
-    animation-iteration-count: 1, 1;
-    animation-fill-mode: forwards, forwards;
-    --YStart: 0vh;
-    --YEnd: -50vh;
-}
-
 div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) {
-    position: absolute;
-    background-color: red;
-    opacity: 0.5;
-    height: 12px;
-    width: 12px;
-    border-radius: 50%;
-    animation-name: shootOutRightBottom1;
+    animation-name: shootSecond;
     animation-delay: var(--ShootOutDelay);
     animation-duration: var(--ShootOutDuration);
     animation-timing-function: ease-in-out;
@@ -144,13 +198,7 @@ div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) {
 }
 
 div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(2) {
-    position: absolute;
-    background-color: red;
-    opacity: 0.5;
-    height: 12px;
-    width: 12px;
-    border-radius: 50%;
-    animation-name: shootOutRightBottom2;
+    animation-name: shootSecond;
     animation-delay: var(--ShootOutDelay);
     animation-duration: var(--ShootOutDuration);
     animation-timing-function: ease-in-out;
@@ -161,13 +209,7 @@ div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(2) {
 }
 
 div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(3) {
-    position: absolute;
-    background-color: red;
-    opacity: 0.5;
-    height: 12px;
-    width: 12px;
-    border-radius: 50%;
-    animation-name: shootOutRightBottom3;
+    animation-name: shootSecond;
     animation-delay: var(--ShootOutDelay);
     animation-duration: var(--ShootOutDuration);
     animation-timing-function: ease-in-out;
@@ -177,30 +219,8 @@ div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(3) {
     --YEnd: -50vh;
 }
 
-div:nth-of-type(1) > div:nth-of-type(4) {
-    position: absolute;
-    background-color: white;
-    height: 12px;
-    width: 12px;
-    border-radius: 50%;
-    animation-name: shootUp, shootRightTop;
-    animation-delay: 0ms, var(--ShootUpDuration);
-    animation-duration: var(--ShootUpDuration), var(--ShootDuration);
-    animation-timing-function: var(--cB), var(--cBExplosion);
-    animation-iteration-count: 1, 1;
-    animation-fill-mode: forwards, forwards;
-    --YStart: 0vh;
-    --YEnd: -50vh;
-}
-
 div:nth-of-type(1) > div:nth-of-type(4) > div:nth-of-type(1) {
-    position: absolute;
-    background-color: red;
-    opacity: 0.5;
-    height: 12px;
-    width: 12px;
-    border-radius: 50%;
-    animation-name: shootOutRightTop1;
+    animation-name: shootSecond;
     animation-delay: var(--ShootOutDelay);
     animation-duration: var(--ShootOutDuration);
     animation-timing-function: ease-in-out;
@@ -211,13 +231,7 @@ div:nth-of-type(1) > div:nth-of-type(4) > div:nth-of-type(1) {
 }
 
 div:nth-of-type(1) > div:nth-of-type(4) > div:nth-of-type(2) {
-    position: absolute;
-    background-color: red;
-    opacity: 0.5;
-    height: 12px;
-    width: 12px;
-    border-radius: 50%;
-    animation-name: shootOutRightTop2;
+    animation-name: shootSecond;
     animation-delay: var(--ShootOutDelay);
     animation-duration: var(--ShootOutDuration);
     animation-timing-function: ease-in-out;
@@ -228,13 +242,7 @@ div:nth-of-type(1) > div:nth-of-type(4) > div:nth-of-type(2) {
 }
 
 div:nth-of-type(1) > div:nth-of-type(4) > div:nth-of-type(3) {
-    position: absolute;
-    background-color: red;
-    opacity: 0.5;
-    height: 12px;
-    width: 12px;
-    border-radius: 50%;
-    animation-name: shootOutRightTop3;
+    animation-name: shootSecond;
     animation-delay: var(--ShootOutDelay);
     animation-duration: var(--ShootOutDuration);
     animation-timing-function: ease-in-out;
@@ -244,30 +252,8 @@ div:nth-of-type(1) > div:nth-of-type(4) > div:nth-of-type(3) {
     --YEnd: -50vh;
 }
 
-div:nth-of-type(1) > div:nth-of-type(5) {
-    position: absolute;
-    background-color: white;
-    height: 12px;
-    width: 12px;
-    border-radius: 50%;
-    animation-name: shootUp, shootLeftTop;
-    animation-delay: 0ms, var(--ShootUpDuration);
-    animation-duration: var(--ShootUpDuration), var(--ShootDuration);
-    animation-timing-function: var(--cB), var(--cBExplosion);
-    animation-iteration-count: 1, 1;
-    animation-fill-mode: forwards, forwards;
-    --YStart: 0vh;
-    --YEnd: -50vh;
-}
-
 div:nth-of-type(1) > div:nth-of-type(5) > div:nth-of-type(1) {
-    position: absolute;
-    background-color: red;
-    opacity: 0.5;
-    height: 12px;
-    width: 12px;
-    border-radius: 50%;
-    animation-name: shootOutLeftTop1;
+    animation-name: shootSecond;
     animation-delay: var(--ShootOutDelay);
     animation-duration: var(--ShootOutDuration);
     animation-timing-function: ease-in-out;
@@ -276,13 +262,7 @@ div:nth-of-type(1) > div:nth-of-type(5) > div:nth-of-type(1) {
 }
 
 div:nth-of-type(1) > div:nth-of-type(5) > div:nth-of-type(2) {
-    position: absolute;
-    background-color: red;
-    opacity: 0.5;
-    height: 12px;
-    width: 12px;
-    border-radius: 50%;
-    animation-name: shootOutLeftTop2;
+    animation-name: shootSecond;
     animation-delay: var(--ShootOutDelay);
     animation-duration: var(--ShootOutDuration);
     animation-timing-function: ease-in-out;
@@ -291,13 +271,7 @@ div:nth-of-type(1) > div:nth-of-type(5) > div:nth-of-type(2) {
 }
 
 div:nth-of-type(1) > div:nth-of-type(5) > div:nth-of-type(3) {
-    position: absolute;
-    background-color: red;
-    opacity: 0.5;
-    height: 12px;
-    width: 12px;
-    border-radius: 50%;
-    animation-name: shootOutLeftTop3;
+    animation-name: shootSecond;
     animation-delay: var(--ShootOutDelay);
     animation-duration: var(--ShootOutDuration);
     animation-timing-function: ease-in-out;
@@ -305,30 +279,8 @@ div:nth-of-type(1) > div:nth-of-type(5) > div:nth-of-type(3) {
     animation-fill-mode: forwards;
 }
 
-div:nth-of-type(1) > div:nth-of-type(6) {
-    position: absolute;
-    background-color: white;
-    height: 12px;
-    width: 12px;
-    border-radius: 50%;
-    animation-name: shootUp, shootBottom;
-    animation-delay: 0ms, var(--ShootUpDuration);
-    animation-duration: var(--ShootUpDuration), var(--ShootDuration);
-    animation-timing-function: var(--cB), var(--cBExplosion);
-    animation-iteration-count: 1, 1;
-    animation-fill-mode: forwards, forwards;
-    --YStart: 0vh;
-    --YEnd: -50vh;
-}
-
 div:nth-of-type(1) > div:nth-of-type(6) > div:nth-of-type(1) {
-    position: absolute;
-    background-color: red;
-    opacity: 0.5;
-    height: 12px;
-    width: 12px;
-    border-radius: 50%;
-    animation-name: shootOutBottom1;
+    animation-name: shootSecond;
     animation-delay: var(--ShootOutDelay);
     animation-duration: var(--ShootOutDuration);
     animation-timing-function: ease-in-out;
@@ -337,13 +289,7 @@ div:nth-of-type(1) > div:nth-of-type(6) > div:nth-of-type(1) {
 }
 
 div:nth-of-type(1) > div:nth-of-type(6) > div:nth-of-type(2) {
-    position: absolute;
-    background-color: red;
-    opacity: 0.5;
-    height: 12px;
-    width: 12px;
-    border-radius: 50%;
-    animation-name: shootOutBottom2;
+    animation-name: shootSecond;
     animation-delay: var(--ShootOutDelay);
     animation-duration: var(--ShootOutDuration);
     animation-timing-function: ease-in-out;
@@ -352,13 +298,7 @@ div:nth-of-type(1) > div:nth-of-type(6) > div:nth-of-type(2) {
 }
 
 div:nth-of-type(1) > div:nth-of-type(6) > div:nth-of-type(3) {
-    position: absolute;
-    background-color: red;
-    opacity: 0.5;
-    height: 12px;
-    width: 12px;
-    border-radius: 50%;
-    animation-name: shootOutBottom3;
+    animation-name: shootSecond;
     animation-delay: var(--ShootOutDelay);
     animation-duration: var(--ShootOutDuration);
     animation-timing-function: ease-in-out;
@@ -366,30 +306,8 @@ div:nth-of-type(1) > div:nth-of-type(6) > div:nth-of-type(3) {
     animation-fill-mode: forwards;
 }
 
-div:nth-of-type(1) > div:nth-of-type(7) {
-    position: absolute;
-    background-color: white;
-    height: 12px;
-    width: 12px;
-    border-radius: 50%;
-    animation-name: shootUp, shootTop;
-    animation-delay: 0ms, var(--ShootUpDuration);
-    animation-duration: var(--ShootUpDuration), var(--ShootDuration);
-    animation-timing-function: var(--cB), var(--cBExplosion);
-    animation-iteration-count: 1, 1;
-    animation-fill-mode: forwards, forwards;
-    --YStart: 0vh;
-    --YEnd: -50vh;
-}
-
 div:nth-of-type(1) > div:nth-of-type(7) > div:nth-of-type(1) {
-    position: absolute;
-    background-color: red;
-    opacity: 0.5;
-    height: 12px;
-    width: 12px;
-    border-radius: 50%;
-    animation-name: shootOutTop1;
+    animation-name: shootSecond;
     animation-delay: var(--ShootOutDelay);
     animation-duration: var(--ShootOutDuration);
     animation-timing-function: ease-in-out;
@@ -398,13 +316,7 @@ div:nth-of-type(1) > div:nth-of-type(7) > div:nth-of-type(1) {
 }
 
 div:nth-of-type(1) > div:nth-of-type(7) > div:nth-of-type(2) {
-    position: absolute;
-    background-color: red;
-    opacity: 0.5;
-    height: 12px;
-    width: 12px;
-    border-radius: 50%;
-    animation-name: shootOutTop2;
+    animation-name: shootSecond;
     animation-delay: var(--ShootOutDelay);
     animation-duration: var(--ShootOutDuration);
     animation-timing-function: ease-in-out;
@@ -413,13 +325,7 @@ div:nth-of-type(1) > div:nth-of-type(7) > div:nth-of-type(2) {
 }
 
 div:nth-of-type(1) > div:nth-of-type(7) > div:nth-of-type(3) {
-    position: absolute;
-    background-color: red;
-    opacity: 0.5;
-    height: 12px;
-    width: 12px;
-    border-radius: 50%;
-    animation-name: shootOutTop3;
+    animation-name: shootSecond;
     animation-delay: var(--ShootOutDelay);
     animation-duration: var(--ShootOutDuration);
     animation-timing-function: ease-in-out;
@@ -443,16 +349,29 @@ div:nth-of-type(1) > div:nth-of-type(7) > div:nth-of-type(3) {
     }
 }
 
-@keyframes shootLeftBottom {
+@keyframes shootFirst {
     0% {
         background-color: red;
         opacity: 1;
-        transform: translate(0vw, -50vh);
+        transform: translate(var(--StartWidth), var(--StartHeight));
     }
     100% {
         opacity: 1;
         transform: translate(5vw, -45vh);
+        transform: translate(var(--EndWidth), var(--EndHeight));
         background-color: transparent;
+    }
+}
+
+@keyframes shootSecond {
+    0% {
+        opacity: 1;
+        background-color: var(--StartColor);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(var(--SecondEndWidth), var(--SecondEndHeight));
+        background-color: var(--EndColor);
     }
 }
 
@@ -492,19 +411,6 @@ div:nth-of-type(1) > div:nth-of-type(7) > div:nth-of-type(3) {
     }
 }
 
-@keyframes shootLeftTop {
-    0% {
-        background-color: white;
-        opacity: 1;
-        transform: translate(0vw, -50vh);
-    }
-    100% {
-        opacity: 1;
-        transform: translate(5vw, -55vh);
-        background-color: transparent;
-    }
-}
-
 @keyframes shootOutLeftTop1 {
     0% {
         opacity: 1;
@@ -538,19 +444,6 @@ div:nth-of-type(1) > div:nth-of-type(7) > div:nth-of-type(3) {
         opacity: 0;
         transform: translate(1vw, -2vh);
         background-color: rgb(0, 255, 13);
-    }
-}
-
-@keyframes shootRightTop {
-    0% {
-        background-color: white;
-        opacity: 1;
-        transform: translate(0vw, -50vh);
-    }
-    100% {
-        opacity: 1;
-        transform: translate(-5vw, -55vh);
-        background-color: transparent;
     }
 }
 
@@ -590,19 +483,6 @@ div:nth-of-type(1) > div:nth-of-type(7) > div:nth-of-type(3) {
     }
 }
 
-@keyframes shootRightBottom {
-    0% {
-        background-color: red;
-        opacity: 1;
-        transform: translate(0vw, -50vh);
-    }
-    100% {
-        opacity: 1;
-        transform: translate(-5vw, -45vh);
-        background-color: transparent;
-    }
-}
-
 @keyframes shootOutRightBottom1 {
     0% {
         opacity: 1;
@@ -639,19 +519,6 @@ div:nth-of-type(1) > div:nth-of-type(7) > div:nth-of-type(3) {
     }
 }
 
-@keyframes shootTop {
-    0% {
-        background-color: white;
-        opacity: 1;
-        transform: translate(0vw, -50vh);
-    }
-    100% {
-        opacity: 1;
-        transform: translate(0vw, -60vh);
-        background-color: transparent;
-    }
-}
-
 @keyframes shootOutTop1 {
     0% {
         opacity: 1;
@@ -685,19 +552,6 @@ div:nth-of-type(1) > div:nth-of-type(7) > div:nth-of-type(3) {
         opacity: 0;
         transform: translate(2vw, 5vh);
         background-color: orange;
-    }
-}
-
-@keyframes shootBottom {
-    0% {
-        background-color: white;
-        opacity: 1;
-        transform: translate(0vw, -50vh);
-    }
-    100% {
-        opacity: 1;
-        transform: translate(0vw, -40vh);
-        background-color: transparent;
     }
 }
 

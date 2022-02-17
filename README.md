@@ -1,8 +1,10 @@
 # ⚙ Interactive firework show
-*Insert picture/gif of full project UI*
+Ik pas deze afbeelding aan naar de nieuweste versie.
+
+![First version GIF](./images/FirstAnimation.gif)
 
 ## 📂 Assignment
-*Assignment explanation*
+Een interactieve vuurwerkshow maken met puur CSS
 
 ## 🧾 Table of contents
 -   [About the project](##About-the-project)

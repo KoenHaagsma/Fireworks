@@ -1,6 +1,6 @@
-# ⚙ Project name
-
+# ⚙ Interactive firework show
 *Insert picture/gif of full project UI*
+
 ## 📂 Assignment
 *Assignment explanation*
 

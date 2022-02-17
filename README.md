@@ -7,7 +7,9 @@
 ## 🧾 Table of contents
 -   [About the project](##About-the-project)
       * [Built with](###Built-with)
+-   [Progression](##Progression)
 -   [License](##License)
+-   [Contributers](##Contributers)
 
 ## 📖 About the project
 *Tell where the project is about*

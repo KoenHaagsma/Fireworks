@@ -15,6 +15,7 @@
 ## 🛠 Built with
 *Where is the application made with*
 
+## 👩‍💻 Progression
 
 
 ## 📑 Sources

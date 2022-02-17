@@ -20,9 +20,9 @@
 ### First version:
 In mijn eerste versie ben ik bezig geweest met het uberhaupt proberen om een in dit geval een bolletje omhoog te laten bewegen, direct erachter gekomen dat de assen andersom lopen dan ik dacht. Ook bij de eerste versie voor het eerste gewerkt met het chainen van animaties.
 
+![First version GIF](./images/FirstAnimation.gif)
 
 ### Second version:
-
 
 ## 📑 Sources
 - [Bronnen]()

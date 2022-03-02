@@ -1,5 +1,5 @@
 # ⚙ Interactive firework show
-Ik pas deze afbeelding aan naar de nieuweste versie.
+Ik pas deze afbeelding aan naar de nieuwste versie.
 
 ![First version GIF](./images/FirstAnimation.gif)
 

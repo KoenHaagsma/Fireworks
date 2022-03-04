@@ -26,6 +26,21 @@ body {
     background-color: #0b064f;
 }
 
+/* Button section */
+section {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    padding: 1rem;
+}
+
+section > label {
+    color: #fff;
+}
+
 /* Fireworks 1 */
 div > div {
     position: absolute;
@@ -790,6 +805,7 @@ div:nth-of-type(1) > div:nth-of-type(7) > div:nth-of-type(8) {
 
 /* ---------------------------------------------------------- */
 
+/* The ball shoots up */
 @keyframes shootUp {
     0% {
         transform: translateY(var(--YStart));
@@ -806,6 +822,7 @@ div:nth-of-type(1) > div:nth-of-type(7) > div:nth-of-type(8) {
     }
 }
 
+/* First explosion */
 @keyframes shootFirst {
     0% {
         background-color: red;
@@ -820,6 +837,7 @@ div:nth-of-type(1) > div:nth-of-type(7) > div:nth-of-type(8) {
     }
 }
 
+/* Second explostion */
 @keyframes shootSecond {
     0% {
         opacity: 1;

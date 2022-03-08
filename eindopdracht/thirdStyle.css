@@ -51,24 +51,34 @@ body > div:last-of-type {
         transform: scale(0);
         transform: translateY(0vh);
         background-color: white;
-    }
-    55% {
-        background-color: white;
-        transform: scale(0);
-        transform: translateY(-50vh);
         box-shadow: none;
     }
-    70% {
-        box-shadow: var(--BoxShadowCircleSmall), var(--BoxShadowCircleLarge);
-        background-color: red;
+
+    55% {
+        transform: scale(0);
+        transform: translateY(-50vh);
+        background-color: white;
+        box-shadow: none;
+    }
+
+    71% {
         transform: scale(1);
         transform: translateY(-50vh);
+        background-color: transparent;
+        box-shadow: var(--BoxShadowCircleSmall), var(--BoxShadowCircleLarge);
+    }
+
+    95% {
+        transform: translateY(-50vh);
+        background-color: transparent;
+        box-shadow: var(--BoxShadowCircleSmall), var(--BoxShadowCircleLarge);
+        opacity: 1;
     }
 
     100% {
-        transform: scale(1);
-        box-shadow: var(--BoxShadowCircleSmall), var(--BoxShadowCircleLarge);
-        background-color: transparent;
         transform: translateY(-50vh);
+        background-color: transparent;
+        box-shadow: var(--BoxShadowCircleSmall), var(--BoxShadowCircleLarge);
+        opacity: 0;
     }
 }

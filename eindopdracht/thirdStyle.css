@@ -1,17 +1,72 @@
 :root {
     --cB: cubic-bezier(0.54, 0.67, 0.73, 1.3);
     --cBExplosion: cubic-bezier(0, 0.36, 0.26, 1);
-    --ShootUpDuration: 2s;
-    --ShootDuration: 0.5s;
-    --ShootOutDelay: 2s;
-    --ShootOutDuration: 1s;
+    --ShootHeight: -50vh;
+    --ShootWidth: 0vw;
+    --AnimationDuration: 2s;
+    --AnimationTimingFunction: cubic-bezier(0.26, 1.62, 1, 1);
     --BoxShadowSize: 1vmin;
+    --ButtonScaling: scale(1.25);
+
+    /* Standard */
+    --BoxShadowSmall: 0px 30px blue, 0px -30px greenyellow, 30px 0px red, -30px 0px yellow, 25px 15px purple,
+        15px -25px pink, -25px -15px rgb(90, 15, 90), -15px 25px rgb(207, 197, 230), 15px 25px rgb(25, 25, 61),
+        25px -15px rgb(55, 82, 16), -15px -25px red, -25px 15px rgb(59, 7, 7);
+
+    --BoxShadowLarge: 0px 60px rgb(76, 76, 133), 0px -60px rgb(221, 189, 9), 60px 0px rgb(70, 52, 52),
+        -60px 0px rgb(17, 87, 134), 50px 30px purple, 30px -50px pink, -50px -30px rgb(90, 15, 90),
+        -30px 50px rgb(207, 197, 230), 30px 50px rgb(25, 25, 61), 50px -30px rgb(145, 255, 0),
+        -30px -50px rgb(225, 0, 255), -50px 30px rgb(255, 0, 212);
+
+    /* Circles */
     --BoxShadowCircleSmall: 0px 30px blue, 0px -30px greenyellow, 30px 0px red, -30px 0px yellow, 25px 15px purple,
         15px -25px pink, -25px -15px rgb(90, 15, 90), -15px 25px rgb(207, 197, 230), 15px 25px rgb(25, 25, 61),
         25px -15px rgb(55, 82, 16), -15px -25px red, -25px 15px rgb(59, 7, 7);
-    --BoxShadowCircleLarge: 0px 60px blue, 0px -60px greenyellow, 60px 0px red, -60px 0px yellow, 50px 30px purple,
-        30px -50px pink, -50px -30px rgb(90, 15, 90), -30px 50px rgb(207, 197, 230), 30px 50px rgb(25, 25, 61),
-        50px -30px rgb(55, 82, 16), -30px -50px red, -50px 30px rgb(59, 7, 7);
+    --BoxShadowCircleLarge: 0px 60px rgb(76, 76, 133), 0px -60px rgb(221, 189, 9), 60px 0px rgb(70, 52, 52),
+        -60px 0px rgb(17, 87, 134), 50px 30px purple, 30px -50px pink, -50px -30px rgb(90, 15, 90),
+        -30px 50px rgb(207, 197, 230), 30px 50px rgb(25, 25, 61), 50px -30px rgb(145, 255, 0),
+        -30px -50px rgb(225, 0, 255), -50px 30px rgb(255, 0, 212);
+
+    /* Rectangles */
+    --BoxShadowRectangleSmall: 30px 30px blue, 20px 30px rgb(0, 255, 42), 10px 30px red, 0px 30px greenyellow,
+        -10px 30px pink, -20px 30px purple, -30px 30px hotpink, -30px 0px rgb(212, 0, 255), -30px -10px rgb(255, 166, 0),
+        -30px -20px rgb(187, 255, 0), -30px -30px rgb(255, 0, 98), -30px 20px rgb(0, 255, 21),
+        -30px 10px rgb(37, 158, 138), 30px 20px rgb(195, 0, 255), 30px 10px rgb(0, 183, 255), 30px 0px pink,
+        30px -20px rgb(255, 0, 212), 30px -10px rgb(255, 0, 98), 30px -30px rgb(55, 82, 16), 20px -30px rgb(225, 0, 255),
+        10px -30px rgb(76, 76, 133), 0px -30px rgb(207, 197, 230), -10px -30px white, -20px -30px rgb(212, 212, 255);
+    --BoxShadowRectangleLarge: 60px 60px blue, 40px 60px rgb(0, 255, 42), 20px 60px red, 0px 60px greenyellow,
+        -40px 60px pink, -20px 60px purple, -60px 60px hotpink, -60px 0px rgb(212, 0, 255), -60px -20px rgb(255, 166, 0),
+        -60px -40px rgb(187, 255, 0), -60px -60px rgb(255, 0, 98), -60px 40px rgb(0, 255, 21),
+        -60px 20px rgb(37, 158, 138), 60px 40px rgb(195, 0, 255), 60px 20px rgb(0, 183, 255), 60px 0px pink,
+        60px -40px rgb(255, 0, 212), 60px -20px rgb(255, 0, 98), 60px -60px rgb(55, 82, 16), 40px -60px rgb(225, 0, 255),
+        20px -60px rgb(76, 76, 133), 0px -60px rgb(207, 197, 230), -20px -60px white, -40px -60px rgb(212, 212, 255);
+
+    /* Stars */
+    --BoxShadowStarSmall: 30px 0px rgb(187, 255, 0), 0px 30px blue, -30px 0px rgb(0, 225, 255),
+        0px -30px rgb(64, 64, 163), 20px -5px rgb(38, 0, 255), 5px 20px rgb(0, 255, 42), -20px 5px red,
+        -5px -20px rgb(0, 255, 128), -20px -5px purple, 5px -20px hotpink, 20px 5px rgb(124, 72, 124),
+        -5px 20px rgb(0, 119, 255), 10px -10px green, -10px -10px rgb(187, 255, 0), 10px 10px rgb(255, 255, 255),
+        10px 10px rgb(255, 0, 0), -10px 10px green;
+    --BoxShadowStarLarge: 60px 0px rgb(26, 26, 150), 0px 60px rgb(0, 253, 253), -60px 0px hotpink, 0px -60px blue,
+        40px -10px rgb(0, 255, 85), 10px 40px red, -40px 10px rgb(187, 255, 0), -10px -40px rgb(255, 0, 140),
+        -40px -10px purple, 10px -40px purple, 40px 10px purple, -10px 40px rgb(255, 255, 255),
+        20px -20px rgb(32, 32, 48), -20px -20px hotpink, 20px 20px rgb(187, 255, 0), -20px 20px green;
+
+    /* Triangle */
+    --BoxShadowTriangleSmall: 30px 30px blue, -30px 30px rgb(255, 0, 242), 0px -30px rgb(0, 255, 166),
+        20px 0px rgb(255, 0, 0), 0px 30px rgb(146, 102, 102), -20px 0px rgb(255, 0, 0), 15px 30px rgb(128, 255, 0),
+        -15px 30px rgb(128, 255, 0), -25px 15px rgb(43, 255, 0), 25px 15px rgb(64, 255, 0), 10px -15px rgb(0, 81, 255),
+        -10px -15px rgb(0, 81, 255);
+    --BoxShadowTriangleLarge: 60px 60px rgb(119, 0, 255), -60px 60px rgb(51, 255, 0), 0px 60px rgb(0, 153, 255),
+        0px -60px rgb(0, 255, 208), 37.5px 0px rgb(255, 0, 0), 0px 60px rgb(255, 0, 0), -37.5px 0px rgb(151, 59, 59),
+        30px 60px rgb(128, 255, 0), -30px 60px rgb(128, 255, 0), -50px 30px rgb(43, 255, 0), 50px 30px rgb(64, 255, 0),
+        10px -45px rgb(0, 81, 255), -10px -45px rgb(0, 81, 255), 20px -30px rgb(0, 81, 255), -20px -30px rgb(0, 81, 255),
+        30px -15px rgb(0, 255, 21), -30px -15px rgb(255, 0, 242), 45px 15px rgb(183, 0, 255),
+        -45px 15px rgb(212, 0, 255), 55px 45px rgb(255, 225, 0), -55px 45px rgb(238, 255, 0), 45px 60px rgb(30, 255, 0),
+        -45px 60px rgb(153, 0, 255), 15px 60px rgb(255, 0, 85), -15px 60px rgb(0, 255, 98);
+
+    /* General */
+    --BoxShadow: var(--BoxShadowSmall), var(--BoxShadowLarge);
 }
 
 html {
@@ -29,56 +84,334 @@ body {
     display: flex;
     position: relative;
     justify-content: center;
-    align-items: flex-end;
+    align-items: flex-start;
     background-color: #0b064f;
 }
 
 /* --------------------------- */
 
-body > div:last-of-type {
+body > div:first-of-type {
+    top: 0;
+    right: 0;
+    padding: 2rem;
+}
+
+body > div input {
+    border-radius: 50%;
+}
+
+body > input[type='radio'] {
+    display: none;
+}
+
+body > label {
+    display: inline-block;
+    cursor: pointer;
+    color: white;
+    margin-right: 5rem;
+    border-radius: 50%;
+    margin: 4rem;
+    transition: all 0.5s;
+}
+
+body > label:hover {
+    transform: var(--ButtonScaling);
+}
+
+body > label:active {
+    transform: var(--ButtonScaling);
+}
+
+body > label:focus {
+    transform: var(--ButtonScaling);
+}
+
+body > label:first-of-type {
+    box-shadow: var(--BoxShadowCircleSmall);
+    height: var(--BoxShadowSize);
+    width: var(--BoxShadowSize);
+    cursor: pointer;
+}
+
+body > input[type='radio']:nth-of-type(1):checked ~ div {
+    --BoxShadow: var(--BoxShadowSmall), var(--BoxShadowLarge);
+}
+
+body > input[type='radio']:nth-of-type(1):checked + label {
+    transform: var(--ButtonScaling);
+}
+
+body > label:nth-of-type(2) {
+    box-shadow: var(--BoxShadowRectangleSmall);
+    height: var(--BoxShadowSize);
+    width: var(--BoxShadowSize);
+    cursor: pointer;
+}
+
+body > input[type='radio']:nth-of-type(2):checked ~ div {
+    --BoxShadow: var(--BoxShadowRectangleSmall), var(--BoxShadowRectangleLarge);
+}
+
+body > input[type='radio']:nth-of-type(2):checked + label {
+    transform: var(--ButtonScaling);
+}
+
+body > label:nth-of-type(3) {
+    box-shadow: var(--BoxShadowStarSmall);
+    height: var(--BoxShadowSize);
+    width: var(--BoxShadowSize);
+    cursor: pointer;
+}
+
+body > input[type='radio']:nth-of-type(3):checked ~ div {
+    --BoxShadow: var(--BoxShadowStarSmall), var(--BoxShadowStarLarge);
+}
+
+body > input[type='radio']:nth-of-type(3):checked + label {
+    transform: var(--ButtonScaling);
+}
+
+body > label:nth-of-type(4) {
+    box-shadow: var(--BoxShadowTriangleSmall);
+    height: var(--BoxShadowSize);
+    width: var(--BoxShadowSize);
+    cursor: pointer;
+}
+
+body > input[type='radio']:nth-of-type(4):checked ~ div {
+    --BoxShadow: var(--BoxShadowTriangleSmall), var(--BoxShadowTriangleLarge);
+}
+
+body > input[type='radio']:nth-of-type(4):checked + label {
+    transform: var(--ButtonScaling);
+}
+
+body > div:nth-of-type(2) {
     position: absolute;
     height: var(--BoxShadowSize);
     width: var(--BoxShadowSize);
     border-radius: 50%;
     animation-name: expand;
-    animation-duration: 2s;
-    animation-timing-function: cubic-bezier(0, 1.1, 0.99, 0.96);
+    animation-duration: calc(var(--AnimationDuration) * 1.05);
+    animation-timing-function: var(--AnimationTimingFunction);
     animation-iteration-count: infinite;
+
+    --ShootWidth: 16vw;
+    --ShootHeight: 30vh;
+}
+
+body > div:nth-of-type(3) {
+    position: absolute;
+    height: var(--BoxShadowSize);
+    width: var(--BoxShadowSize);
+    border-radius: 50%;
+    animation-name: expand;
+    animation-duration: calc(var(--AnimationDuration) * 0.98);
+    animation-timing-function: var(--AnimationTimingFunction);
+    animation-iteration-count: infinite;
+    animation-delay: 1s;
+
+    --ShootWidth: 10vw;
+    --ShootHeight: 32vh;
+}
+
+body > div:nth-of-type(4) {
+    position: absolute;
+    height: var(--BoxShadowSize);
+    width: var(--BoxShadowSize);
+    border-radius: 50%;
+    animation-name: expand;
+    animation-duration: calc(var(--AnimationDuration) * 1.02);
+    animation-timing-function: var(--AnimationTimingFunction);
+    animation-iteration-count: infinite;
+    animation-delay: 2s;
+
+    --ShootWidth: -12vw;
+    --ShootHeight: 40vh;
+}
+
+body > div:nth-of-type(5) {
+    position: absolute;
+    height: var(--BoxShadowSize);
+    width: var(--BoxShadowSize);
+    border-radius: 50%;
+    animation-name: expand;
+    animation-duration: calc(var(--AnimationDuration) * 1.1);
+    animation-timing-function: var(--AnimationTimingFunction);
+    animation-iteration-count: infinite;
+    animation-delay: 3s;
+
+    --ShootWidth: 6vw;
+    --ShootHeight: 43vh;
+}
+
+body > div:nth-of-type(6) {
+    position: absolute;
+    height: var(--BoxShadowSize);
+    width: var(--BoxShadowSize);
+    border-radius: 50%;
+    animation-name: expand;
+    animation-duration: calc(var(--AnimationDuration) * 1.05);
+    animation-timing-function: var(--AnimationTimingFunction);
+    animation-iteration-count: infinite;
+    animation-delay: 5s;
+
+    --ShootWidth: -16vw;
+    --ShootHeight: 43vh;
+}
+
+body > div:nth-of-type(7) {
+    position: absolute;
+    height: var(--BoxShadowSize);
+    width: var(--BoxShadowSize);
+    border-radius: 50%;
+    animation-name: expand;
+    animation-duration: calc(var(--AnimationDuration) * 1.18);
+    animation-timing-function: var(--AnimationTimingFunction);
+    animation-iteration-count: infinite;
+    animation-delay: 5s;
+
+    --ShootWidth: -20vw;
+    --ShootHeight: 53vh;
+}
+
+body > div:nth-of-type(8) {
+    position: absolute;
+    height: var(--BoxShadowSize);
+    width: var(--BoxShadowSize);
+    border-radius: 50%;
+    animation-name: expand;
+    animation-duration: calc(var(--AnimationDuration) * 0.9);
+    animation-timing-function: var(--AnimationTimingFunction);
+    animation-iteration-count: infinite;
+    animation-delay: 3s;
+
+    --ShootWidth: 6vw;
+    --ShootHeight: 43vh;
+}
+
+body > div:nth-of-type(9) {
+    position: absolute;
+    background-color: black;
+    bottom: 0;
+    z-index: 99;
+    --BoxShadow: none !important;
+    width: 100vw;
+    height: 25vh;
+    -webkit-clip-path: polygon(
+        0% 60%,
+        5% 60%,
+        5% 40%,
+        10% 40%,
+        10% 30%,
+        10% 30%,
+        10% 25%,
+        15% 25%,
+        15% 35%,
+        15% 30%,
+        15% 40%,
+        20% 40%,
+        20% 60%,
+        25% 60%,
+        25% 40%,
+        30% 40%,
+        30% 10%,
+        35% 10%,
+        35% 40%,
+        40% 40%,
+        40% 60%,
+        45% 60%,
+        45% 40%,
+        50% 40%,
+        50% 25%,
+        60% 25%,
+        60% 10%,
+        65% 10%,
+        65% 25%,
+        75% 25%,
+        75% 35%,
+        80% 35%,
+        80% 55%,
+        90% 55%,
+        90% 15%,
+        90% 3%,
+        95% 15%,
+        95% 55%,
+        100% 55%,
+        100% 100%,
+        0% 100%
+    );
+    clip-path: polygon(
+        0% 60%,
+        5% 60%,
+        5% 40%,
+        10% 40%,
+        10% 30%,
+        10% 30%,
+        10% 25%,
+        15% 25%,
+        15% 35%,
+        15% 30%,
+        15% 40%,
+        20% 40%,
+        20% 60%,
+        25% 60%,
+        25% 40%,
+        30% 40%,
+        30% 10%,
+        35% 10%,
+        35% 40%,
+        40% 40%,
+        40% 60%,
+        45% 60%,
+        45% 40%,
+        50% 40%,
+        50% 25%,
+        60% 25%,
+        60% 10%,
+        65% 10%,
+        65% 25%,
+        75% 25%,
+        75% 35%,
+        80% 35%,
+        80% 55%,
+        90% 55%,
+        90% 15%,
+        90% 0%,
+        95% 15%,
+        95% 55%,
+        100% 55%,
+        100% 100%,
+        0% 100%
+    );
 }
 
 @keyframes expand {
     0% {
         transform: scale(0);
-        transform: translateY(0vh);
+        transform: translateY(100vh);
         background-color: white;
         box-shadow: none;
     }
 
     55% {
         transform: scale(0);
-        transform: translateY(-50vh);
+        transform: translate(var(--ShootWidth), var(--ShootHeight));
         background-color: white;
         box-shadow: none;
     }
 
     71% {
         transform: scale(1);
-        transform: translateY(-50vh);
+        transform: translate(var(--ShootWidth), var(--ShootHeight));
         background-color: transparent;
-        box-shadow: var(--BoxShadowCircleSmall), var(--BoxShadowCircleLarge);
-    }
-
-    95% {
-        transform: translateY(-50vh);
-        background-color: transparent;
-        box-shadow: var(--BoxShadowCircleSmall), var(--BoxShadowCircleLarge);
-        opacity: 1;
+        box-shadow: var(--BoxShadow);
     }
 
     100% {
-        transform: translateY(-50vh);
+        transform: translate(var(--ShootWidth), var(--ShootHeight));
         background-color: transparent;
-        box-shadow: var(--BoxShadowCircleSmall), var(--BoxShadowCircleLarge);
-        opacity: 0;
+        box-shadow: var(--BoxShadow);
+        opacity: 1;
     }
 }

@@ -1,7 +1,9 @@
 # ⚙ Interactieve vuurwerk show
 Dit is de meest recente versie van de show
 
-![Third version PNG](./images/derde_versie.PNG)
+![Third version PNG](./images/derde_versie.PNG)<br><br>
+
+Live project: https://koenhaagsma.github.io/Fireworks/
 
 ## 📂 Assignment
 Een interactieve vuurwerkshow maken met puur CSS en een interactie die daarbij past.<br>

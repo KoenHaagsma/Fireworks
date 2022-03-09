@@ -1,7 +1,7 @@
 # ⚙ Interactieve vuurwerk show
-Ik pas deze afbeelding aan naar de nieuwste versie.
+Dit is de meest recente versie van de show
 
-![First version GIF](./images/FirstAnimation.gif)
+![Third version PNG](./images/derde_versie.PNG)
 
 ## 📂 Assignment
 Een interactieve vuurwerkshow maken met puur CSS en een interactie die daarbij past.<br>
@@ -70,7 +70,7 @@ Ik vind dat dit nog wat gedetailleerder kan heb dit alleen nog niet kunnen toepa
 
 In mijn derde versie is dan ook mijn eindproduct te bewonderen
 
-![First version GIF](./images/FirstAnimation.gif)
+![Third version PNG](./images/derde_versie.PNG)
 
 Dit heb ik kortom gedaan in m'n derde versie:
 - Box shadows gebruikt om te zorgen dat ik niet elk div(je) hoef te animeren;

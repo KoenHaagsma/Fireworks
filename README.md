@@ -70,7 +70,7 @@ Ik vind dat dit nog wat gedetailleerder kan heb dit alleen nog niet kunnen toepa
 
 In mijn derde versie is dan ook mijn eindproduct te bewonderen
 
-![First version GIF](./images/FirstAnimation.gif)
+![First version GIF](./images/derde_versie.PNG)
 
 Dit heb ik kortom gedaan in m'n derde versie:
 - Box shadows gebruikt om te zorgen dat ik niet elk div(je) hoef te animeren;

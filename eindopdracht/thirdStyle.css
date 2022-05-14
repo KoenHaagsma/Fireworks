@@ -86,7 +86,21 @@ body {
     position: relative;
     justify-content: center;
     align-items: flex-start;
-    background-color: #0b064f;
+    animation: gradient 15s ease infinite;
+    background: linear-gradient(-45deg, #0b064f, #09006e, #0b064f, #09006e);
+    background-size: 400% 400%;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 /* --------------------------- */
 
@@ -119,6 +133,15 @@ body > label:active {
 
 body > label:focus {
     transform: var(--ButtonScaling);
+}
+
+body > label:first-of-type::after,
+body > label:nth-of-type(2)::after,
+body > label:nth-of-type(3)::after,
+body > label:nth-of-type(4)::after {
+    content: '';
+    padding: 2rem 2.5rem;
+    margin-left: -2.2rem;
 }
 
 body > label:first-of-type {

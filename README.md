@@ -88,13 +88,28 @@ Waar loop ik nog tegenaan en wat wil ik nog gedaan hebben:
 
 In de derde versie heb ik dan ook weer erg veel geleerd over voor mij nieuwe CSS technieken zoals: box-shadows, clip-path.
 
-### Fourth version:
+### Fourth version (Herkansing):
+De vierde versie van mijn vuurwerkshow komt voort uit het feedback gesprek dat ik heb gehad tijdens de beoordeling. Ik heb die beoordeling helaas niet gehaald en met deze versie probeer ik dat wel te doen.
+
+In de vierde versie heb ik gevarieerd met wat er te zien is, daarmee bedoel ik dat ik verschillende technieken heb gebruikt om vuurwerk te tonen.
+Dit had ik al gedaan tijdens het proces bij de versies hiervoor maar het was niet te zien in mijn eindproduct.
+Nu heb ik ervoor gezorgd dat, dat wel zo is.
+
+Ik heb namelijk een versie toegevoegd waarin ik gebruik heb gemaakt van div'jes om één bolletje te simuleren, dat betekende dat ik heel veel verschillende selectors moest gebruiken om daartoe te komen.
+
+In deze versie heb ik een een lichte gradient toegevoegd over de achtergrond die wat beweegt, de lucht staat immers nooit stil, de gradient is daarom ook geanimeerd en is lichtelijk te zien.
+
+Tijdens de feedback waren ook de knoppen niet handig om op te klikken, ik heb nu de ::after pseudo-element gebruikt om te zorgen dat er niks aan de knop veranderd maar dat hij wel goed klikbaar is.
 
 ![Fourth version PNG](./images/vierde_versie.png)
 
 Dit heb ik gedaan in m'n vierde versie:
-Waar loop ik nog tegenaan en wat wil ik nog gedaan hebben:
+- Buttons meer accesible gemaakt, het is nu makkelijker om op te klikken;
+- Andere versie van vuurwerk toegevoegd, een versie waarin ik niet gewerkt heb met box-shadows maar met single div'jes die ik appart heb geanimeerd;
+- Achtergrond gradient animatie toegevoegd, omdat de lucht nooit stil staat;
 
+Waar loop ik nog tegenaan en wat wil ik nog gedaan hebben:
+- Ik loop met de single div'jes nog steeds aan tegen dat het heel veel CSS is die telken wordt geschreven, het kan korter en met minder regels maar hier heb ik nog niet echt heel goed naar gekeken.
 
 ## 📑 Sources
 - [MDN clip path](https://developer.mozilla.org/en-US/docs/Web/CSS/clip-path)

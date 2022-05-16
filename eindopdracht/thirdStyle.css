@@ -77,7 +77,6 @@
     /* Display */
     --BoxShadowDisplay: block;
     --ManualDisplay: none;
-    --GradientDisplay: none;
 }
 
 html {
@@ -187,7 +186,6 @@ body > input[type='radio']:nth-of-type(2):checked + label {
     transform: var(--ButtonScaling);
 }
 
-/*
 body > label:nth-of-type(3) {
     box-shadow: var(--BoxShadowStarSmall);
     height: var(--BoxShadowSize);
@@ -331,7 +329,6 @@ body > div:nth-of-type(8) {
 /* ----- */
 
 /* Manual fireworks */
-
 body > div:nth-of-type(9),
 body > div:nth-of-type(10),
 body > div:nth-of-type(11),
@@ -774,6 +771,9 @@ body > div:nth-of-type(15) > div:nth-of-type(4) {
     --SecondEndHeight: -4vh;
     --EndColor: #5a23da;
 }
+/* ----- */
+
+/* Third explosion */
 /* ----- */
 
 /* Skyline */

@@ -90,7 +90,7 @@ In de derde versie heb ik dan ook weer erg veel geleerd over voor mij nieuwe CSS
 
 ### Fourth version:
 
-![Fourth version PNG](./images/vierde_versie.PNG)
+![Fourth version PNG](./images/vierde_versie.png)
 
 Dit heb ik gedaan in m'n vierde versie:
 Waar loop ik nog tegenaan en wat wil ik nog gedaan hebben:

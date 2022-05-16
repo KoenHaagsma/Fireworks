@@ -88,6 +88,14 @@ Waar loop ik nog tegenaan en wat wil ik nog gedaan hebben:
 
 In de derde versie heb ik dan ook weer erg veel geleerd over voor mij nieuwe CSS technieken zoals: box-shadows, clip-path.
 
+### Fourth version:
+
+![Fourth version PNG](./images/vierde_versie.PNG)
+
+Dit heb ik gedaan in m'n vierde versie:
+Waar loop ik nog tegenaan en wat wil ik nog gedaan hebben:
+
+
 ## 📑 Sources
 - [MDN clip path](https://developer.mozilla.org/en-US/docs/Web/CSS/clip-path)
 - [Clip path generator](https://bennettfeely.com/clippy/)

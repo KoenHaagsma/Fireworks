@@ -68,6 +68,11 @@
 
     /* General boxshadow */
     --BoxShadow: var(--BoxShadowSmall), var(--BoxShadowLarge);
+
+    /* Display */
+    --BoxShadowDisplay: block;
+    --ManualDisplay: none;
+    --GradientDisplay: none;
 }
 
 html {
@@ -136,9 +141,7 @@ body > label:focus {
 }
 
 body > label:first-of-type::after,
-body > label:nth-of-type(2)::after,
-body > label:nth-of-type(3)::after,
-body > label:nth-of-type(4)::after {
+body > label:nth-of-type(2)::after {
     content: '';
     padding: 2rem 2.5rem;
     margin-left: -2.2rem;
@@ -166,14 +169,19 @@ body > label:nth-of-type(2) {
     cursor: pointer;
 }
 
-body > input[type='radio']:nth-of-type(2):checked ~ div {
-    --BoxShadow: var(--BoxShadowRectangleSmall), var(--BoxShadowRectangleLarge);
+body > input[type='radio']:nth-of-type(2):checked ~ div:nth-of-type(-n + 8) {
+    --BoxShadowDisplay: none;
+}
+
+body > input[type='radio']:nth-of-type(2):checked + div:nth-last-child(-n + 2):not(:last-of-type) {
+    --ManualDisplay: block;
 }
 
 body > input[type='radio']:nth-of-type(2):checked + label {
     transform: var(--ButtonScaling);
 }
 
+/*
 body > label:nth-of-type(3) {
     box-shadow: var(--BoxShadowStarSmall);
     height: var(--BoxShadowSize);
@@ -188,25 +196,24 @@ body > input[type='radio']:nth-of-type(3):checked ~ div {
 body > input[type='radio']:nth-of-type(3):checked + label {
     transform: var(--ButtonScaling);
 }
-
-body > label:nth-of-type(4) {
-    box-shadow: var(--BoxShadowTriangleSmall);
-    height: var(--BoxShadowSize);
-    width: var(--BoxShadowSize);
-    cursor: pointer;
-}
-
-body > input[type='radio']:nth-of-type(4):checked ~ div {
-    --BoxShadow: var(--BoxShadowTriangleSmall), var(--BoxShadowTriangleLarge);
-}
-
-body > input[type='radio']:nth-of-type(4):checked + label {
-    transform: var(--ButtonScaling);
-}
 /* --------------------------- */
 
-/* Fireworks */
-body > div:nth-of-type(2) {
+/* Fireworks box shadow */
+body > div:nth-of-type(2),
+body > div:nth-of-type(3),
+body > div:nth-of-type(4),
+body > div:nth-of-type(5),
+body > div:nth-of-type(6),
+body > div:nth-of-type(7),
+body > div:nth-of-type(8) {
+    display: var(--BoxShadowDisplay);
+}
+
+body > div:nth-of-type(9) {
+    display: var(--ManualDisplay);
+}
+
+body > div:nth-of-type(5) body > div:nth-of-type(2) {
     position: absolute;
     height: var(--BoxShadowSize);
     width: var(--BoxShadowSize);
@@ -309,9 +316,28 @@ body > div:nth-of-type(8) {
     --ShootWidth: 6vw;
     --ShootHeight: 43vh;
 }
+/* ----- */
+
+/* Manual fireworks */
+body > div:nth-of-type(9) {
+    position: absolute;
+    background-color: white;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    animation-name: shootUp;
+    animation-delay: 0ms;
+    animation-duration: var(--ShootUpDuration);
+    animation-timing-function: var(--cB), ease-in-out;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    --YStart: 0vh;
+    --YEnd: 50vh;
+}
+/* ----- */
 
 /* Skyline */
-body > div:nth-of-type(9) {
+body > div:last-of-type {
     position: absolute;
     background-color: black;
     bottom: 0;
@@ -435,5 +461,29 @@ body > div:nth-of-type(9) {
         background-color: transparent;
         box-shadow: var(--BoxShadow);
         opacity: 1;
+    }
+}
+
+@keyframes shootUp {
+    0% {
+        transform: translateY(var(--YStart));
+    }
+    100% {
+        transform: translateY(var(--YEnd));
+    }
+}
+
+/* First explosion */
+@keyframes shootFirst {
+    0% {
+        background-color: red;
+        opacity: 1;
+        transform: translate(var(--StartWidth), var(--StartHeight));
+    }
+    100% {
+        opacity: 1;
+        transform: translate(5vw, -45vh);
+        transform: translate(var(--EndWidth), var(--EndHeight));
+        background-color: transparent;
     }
 }

@@ -145,7 +145,8 @@ body > label:focus {
 }
 
 body > label:first-of-type::after,
-body > label:nth-of-type(2)::after {
+body > label:nth-of-type(2)::after,
+body > label:nth-of-type(3)::after {
     content: '';
     padding: 2rem 2.5rem;
     margin-left: -2.2rem;

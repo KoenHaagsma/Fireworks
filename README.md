@@ -59,7 +59,8 @@ Dit heb ik dus geleerd in mijn tweede versie:
 
 Waar loop ik tegenaan:
 - Er zijn dingen die ik niet kan doen in CSS, ik denk dan aan: Randomizen van verschillende custom properties, zodat ik niet heel erg veel CSS hoeft te schrijven om elk verschillend bolletje er goed in te krijgen.
-- Nog steeds teveel code die ik moet herschrijven, misschien is hier een andere manier voor, zo ja dan zal ik die uitwerken in [Third version](### Third version).
+- Nog steeds teveel code die ik moet herschrijven, misschien is hier een andere manier voor, zo ja dan zal ik die 
+uitwerken in [Third version](### Third version).
 
 ### Third version:
 In de derde versie heb ik sprongen gemaakt, ik realiseerde dat om elke single div(je) te animeren dat is heel veel werk, ik denk dat het uiteindelijk een heel mooi resultaat kan opleveren omdat je echt elke 'pixel' van het vuurwerk dan kan animeren.
